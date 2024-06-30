@@ -1,14 +1,14 @@
 import { Hono } from "hono";
 import { PrismaClient } from "@prisma/client/edge";
 import { withAccelerate } from "@prisma/extension-accelerate";
-import { sign, verify } from "hono/jwt";
+import { sign } from "hono/jwt";
 
-const user = new Hono<{
+export const user = new Hono<{
   Bindings: {
     DATABASE_URL: string;
     JWT_SECRET: string;
   };
-}>().basePath("/user");
+}>();
 
 user.post("/signup", async (c) => {
   const prisma = new PrismaClient({
@@ -63,5 +63,3 @@ user.post("/signin", async (c) => {
     return c.json({ error: "error while signing in" });
   }
 });
-
-export default user;
