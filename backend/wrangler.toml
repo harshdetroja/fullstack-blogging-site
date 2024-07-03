@@ -3,4 +3,5 @@ compatibility_date = "2023-12-01"
 
 [vars]
 DATABASE_URL="prisma accelerate url"
+
 JWT_SECRET="hydra"

@@ -8,6 +8,7 @@
     "@harshdetroja/common-app": "^1.0.0",
     "@prisma/client": "^5.16.1",
     "@prisma/extension-accelerate": "^1.1.0",
+    "@types/cors": "^2.8.17",
     "hono": "^4.4.9",
     "jsonwebtoken": "^9.0.2",
     "prisma": "^5.16.1"
