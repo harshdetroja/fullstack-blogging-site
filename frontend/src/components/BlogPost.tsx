@@ -1,12 +1,16 @@
+import { BlogCard } from "./BlogCard";
+
 export function BlogPost({ blogs }: any) {
   return (
-    <div>
+    <div className="space-y-4">
       {blogs.map((blog: any, index: any) => {
         return (
-          <div key={index}>
-            <h1>{blog.title}</h1>
-            <p>{blog.content}</p>
-          </div>
+          <BlogCard
+            title={blog.title}
+            content={blog.content}
+            id={blog.id}
+            key={index}
+          />
         );
       })}
     </div>

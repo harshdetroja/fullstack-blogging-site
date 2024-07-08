@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { BlogPost } from "../components/BlogPost";
 
-export function Blog() {
+export function Blogs() {
   const [blogs, setBlogs] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -26,13 +26,13 @@ export function Blog() {
 
   return (
     <>
-      <div>
+      <div className="container p-10">
         <div className="space-y-2">
-          <h1 className="text-black font-bold text-5xl">Blogs</h1>
-          <p className="text-lg">Explore the articles and insights.</p>
+          <h1 className="text-black font-bold text-6xl">Blogs</h1>
+          <p className="text-2xl">Explore the articles and insights.</p>
         </div>
 
-        <div>
+        <div className="mt-10">
           {loading && <div>Loading...</div>}
           {!loading && <BlogPost blogs={blogs} />}
         </div>
